@@ -7,14 +7,19 @@ const element6 = document.getElementById('6');
 const element7 = document.getElementById('7');
 const element8 = document.getElementById('8');
 const element9 = document.getElementById('9');
-let TE = 
+
+let place = this.parentNode.lastChild.innerText 
+
 
 elementArr = [element1, element2, element3, element4, element5, element6, element7, element8, element9]
 
 elementArr.forEach((element)=>{
-    element.addEventListener('click', placeUser())
+    element.addEventListener('click', (e)=>{
+        console.log(`${place} was clicked`);
+    });
 });
 
+
 function placeUser(){
-    console.log(`clicked ${element}`)
+    console.log(`clicked ${place}`)
 }
